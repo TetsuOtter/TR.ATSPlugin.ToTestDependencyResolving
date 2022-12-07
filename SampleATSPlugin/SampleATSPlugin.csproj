@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net35</TargetFramework>
+		<TargetFrameworks>net35;net48;</TargetFrameworks>
 		<LangVersion>10</LangVersion>
 	</PropertyGroup>
 	<PropertyGroup>
