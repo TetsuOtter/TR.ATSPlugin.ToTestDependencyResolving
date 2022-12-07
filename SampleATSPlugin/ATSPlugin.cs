@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -14,6 +15,11 @@ public static class ATSPlugin
 
 	static ATSPlugin()
 	{
+#if DEBUG
+		if (!Debugger.IsAttached)
+			Debugger.Launch();
+#endif
+
 		AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
 	}
 
